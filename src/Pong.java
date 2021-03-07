@@ -264,6 +264,10 @@ public class Pong extends Applet implements Runnable {
 	public void paint(Graphics g) {
 		g.clearRect(0, 0, FrameWidth, FrameHeight);
 		/*
+		 * </pre> Draw the court, <pre>
+		 */
+		g.drawRect(20, PLAY_TOP, FrameWidth - 40, PLAY_BOTTOM - PLAY_TOP);
+		/*
 		 * </pre> draw the ball, <pre>
 		 */
 		g.setColor(Color.red);
