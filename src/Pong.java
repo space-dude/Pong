@@ -306,7 +306,7 @@ public class Pong extends Applet implements Runnable {
 	 * display the score, and adding the listeners. <pre>
 	 */
 	public void init() {
-
+		setSize(FrameWidth, FrameHeight);
 		bx = 70;
 		by = 70;
 		bdx = 7;
@@ -318,6 +318,13 @@ public class Pong extends Applet implements Runnable {
 		myFont = new Font("Courier", Font.BOLD, 24);
 		addKeyListener(new keyBd());
 		addMouseListener(new mseL());
+	}
+	
+	/*
+	 * </pre> Override getPreferredSize() to allow AppletViewer to correctly size it. <pre>
+	 */
+	public Dimension getPreferredSize() {
+		return this.getSize();
 	}
 }
 /*
